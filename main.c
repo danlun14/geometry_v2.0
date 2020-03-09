@@ -1,14 +1,7 @@
-<<<<<<< HEAD
-#include <stdio.h>
-
-int main(){
-    
-}
-
-||||||| merged common ancestors
-=======
 #include <stdio.h>
 #include <string.h>
+#include <ctype.h>
+#include <stdlib.h>
 
 int main()
 {
@@ -16,5 +9,5 @@ int main()
     printf("Введите входные данные формата:\n");
     printf("circle(x y, r) - для круга\n");
     fgets(all, 128, stdin);
+    printf("%s", all);
 }
->>>>>>> add input function
