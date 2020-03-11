@@ -4,6 +4,17 @@
 #include <stdlib.h>
 #include <stdlib.h>
 #include "functions.h"
+typedef struct
+{
+    int x;
+    int y;
+} point;
+
+typedef struct
+{
+    point center;
+    float radius;
+} circle;
 
 int main()
 {
