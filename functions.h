@@ -1,0 +1,1 @@
+int fcheck(char *arr);
