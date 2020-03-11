@@ -1,6 +1,18 @@
 #include <stdlib.h>
 #define NUM_SYS 10
 
+typedef struct
+{
+    int x;
+    int y;
+} point;
+
+typedef struct
+{
+    point center;
+    float radius;
+} circle;
+
 int get_center(circle *cir, char *arr)
 {
     char *cur, *end;
@@ -16,12 +28,12 @@ int get_center(circle *cir, char *arr)
     coordinate = strtol(cur, &end, NUM_SYS);
     if (cur - end != 0)
     {
-        cir->point.x = coordinate;
+        cir->center.x = coordinate;
         cur = end;
         coordinate = strtol(cur, &end, NUM_SYS);
         if (cur - end != 0)
         {
-            cir->point.y = coordinate;
+            cir->center.y = coordinate;
             cur = end;
             num = *cur;
             while (num == ' ')

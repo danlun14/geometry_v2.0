@@ -4,20 +4,12 @@
 #include <stdlib.h>
 #include <stdlib.h>
 #include "functions.h"
-typedef struct
-{
-    int x;
-    int y;
-} point;
-
-typedef struct
-{
-    point center;
-    float radius;
-} circle;
 
 int main()
 {
+    circle *p;
+    circle cir1;
+    p = &cir1;
     int f_res = 0;
     char all[128];
     printf("Введите входные данные формата:\n");
@@ -26,4 +18,7 @@ int main()
     printf("%s", all);
     f_res = fcheck(all);
     printf("%d\n", f_res);
+    f_res = get_center(p, all);
+    printf("%d\n", f_res);
+    printf("%d  %d\n", cir1.center.x, cir1.center.y);
 }
