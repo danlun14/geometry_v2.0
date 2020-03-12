@@ -20,5 +20,6 @@ int main()
     printf("%d\n", f_res);
     f_res = get_center(p, all);
     printf("%d\n", f_res);
-    printf("%d  %d\n", cir1.center.x, cir1.center.y);
+    get_radius(p, all);
+    printf("%d  %d      %f\n", cir1.center.x, cir1.center.y, cir1.radius);
 }
