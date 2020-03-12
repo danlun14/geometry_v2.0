@@ -13,7 +13,7 @@ typedef struct
     float radius;
 } circle;
 
-int get_center(circle *cir, char *arr)
+int get_radius(circle *cir, char *arr)
 {
     char *cur, *end;
     int num, i = 0;
