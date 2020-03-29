@@ -1,11 +1,10 @@
 #include "functions.h"
 
-char *equals_string(char *arr1, char *arr2, int n)
+   char *equals_string(char *arr1, char *arr2, int n)
 {
     int num;
-    for (int i = 0; i < n; i++)
-    {
-        num = arr1[i];
+    for (int i = 0; i < n; i++)    {
+num = arr1[i];
         arr1[i] = toupper(num);
         if (arr1[i] != arr2[i])
         {
