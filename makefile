@@ -1,7 +1,7 @@
 CC = gcc
 CFLAGS = -c –Wall
 EXECUTABLE = main
-SOURCES = src/main.c src/figure_name.c src/get_lpar.c src/get_point.c src/take_zpt.c src/get_radius.c src/get_rpar.c src/last_check.c
+SOURCES = src/main.c figure_name.c src/get_lpar.c get_point.c src/take_zpt.c src/get_radius.c src/get_rpar.c src/last_check.c
 OBJECTS=$(SOURCES: .c=.o)
 
 all:	$(SOURCES) $(EXECUTABLE)
