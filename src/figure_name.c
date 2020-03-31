@@ -16,7 +16,7 @@ char* equals_string(char* arr1, char* arr2, int n)
 int fcheck(char* arr, check_info* a)
 {
     int i = 0, num, cir = 6, tri = 8;
-    char *a_eq, *b_eq, *temp;
+    char *a_eq, *b_eq, *temp, *st_of_fig;
     char CIRCLE[7] = "CIRCLE", TRIANGLE[9] = "TRIANGLE";
     num = arr[i];
     while (num == ' ') {
@@ -24,6 +24,7 @@ int fcheck(char* arr, check_info* a)
         num = arr[i];
     }
     a->cur = arr + i;
+    st_of_fig = a->cur;
     a_eq = equals_string((arr + i), CIRCLE, cir);
     b_eq = equals_string((arr + i), TRIANGLE, tri);
     if (a_eq == NULL) {
@@ -38,10 +39,14 @@ int fcheck(char* arr, check_info* a)
     } else {
         temp = b_eq;
     }
-    strcpy(a->check_report, "ERROR: INCORRECT FIGURE NAME  ");
-    a->check_report[31] = tolower(*(temp - 2));
-    a->check_report[32] = tolower(*(temp - 1));
-    a->check_report[33] = *(temp);
-    a->check_report[34] = tolower(*(temp + 1));
+    strcpy(a->check_report, "ERROR: INCORRECT FIGURE NAME         ");
+    for (i = 0; i < temp - st_of_fig + 2; i++) {
+        if (arr[i] != *temp) {
+            a->check_report[31 + i] = tolower(arr[i]);
+        } else {
+            a->check_report[31 + i] = *temp;
+        }
+    }
+
     return -1;
 }

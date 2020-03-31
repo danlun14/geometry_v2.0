@@ -10,7 +10,7 @@ int rpar(check_info* a)
             strcpy(a->check_report, "ERROR: SYMBOL \")\" NOT FOUND");
             return -1;
         } else if (num != ' ') {
-            strcpy(a->check_report, "ERROR: INCORRECT SYMBOL BEFORE \")\"");
+            strcpy(a->check_report, "ERROR: INCORRECT SYMBOL");
             return -1;
         }
         i++;

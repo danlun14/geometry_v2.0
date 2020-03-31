@@ -19,14 +19,16 @@ typedef struct {
 typedef struct {
     point center;
     float radius;
-    int P; //периметр
+    float P; //периметр
+    float S;
 } circle;
 
 typedef struct {
     point A;
     point B;
     point C;
-    int P;
+    float P;
+    float S;
 } triangle;
 
 int fcheck(char* arr, check_info* a);

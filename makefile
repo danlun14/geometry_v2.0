@@ -1,5 +1,5 @@
 CC = gcc
-CFLAGS = -c –Wall
+CFLAGS = -c –Wall -Werror -g
 EXECUTABLE = main
 SOURCES = src/main.c src/figure_name.c src/get_lpar.c src/get_point.c src/take_zpt.c src/get_radius.c src/get_rpar.c src/last_check.c
 OBJECTS=$(SOURCES: .c=.o)
@@ -10,7 +10,7 @@ $(EXECUTABLE) : $(OBJECTS)
 	$(CC) $(OBJECTS) -o bin/$@
 
 .c.o:
-	$(CC) $(CFLAGS) $< -o build/$@
+	$(CC) $(CFLAGS) $< -o bin/$@
 
 clean:
 	rm -rf *.o *.exe
