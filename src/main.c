@@ -46,6 +46,7 @@ int main()
             printf("triangle (x1 y2, x2 y2, x3 y3) - для треугольника( "
                    "осталось %d)\n",
                    3 - num_of_tri);
+            printf("quit - выключить программу\n");
             fgets(all, 128, stdin);
             if (strcmp(all, "quit\n") == 0) {
                 return 0;
@@ -86,12 +87,12 @@ int main()
                     printf("%s\n", status.check_report);
                     break;
                 }
-                cir[num_of_tri].center.x = mid_cir.center.x;
-                cir[num_of_tri].center.y = mid_cir.center.y;
-                cir[num_of_tri].radius = mid_cir.radius;
+                cir[num_of_cir].center.x = mid_cir.center.x;
+                cir[num_of_cir].center.y = mid_cir.center.y;
+                cir[num_of_cir].radius = mid_cir.radius;
                 print_circle(&cir[num_of_cir]);
                 num_of_cir++;
-            } else if ((f_res = 2) && (num_of_tri != 3)) {
+            } else if ((f_res == 2) && (num_of_tri != 3)) {
                 f_res = lpar(&status);
                 if (f_res == -1) {
                     printf("%s\n", status.check_report);
