@@ -1,5 +1,5 @@
 #define NUM_SYS 10
-#include "functions.h"
+#include "parse_functions.h"
 
 int get_point(point* p, check_info* a)
 {
@@ -19,6 +19,6 @@ int get_point(point* p, check_info* a)
             return 0;
         }
     }
-    strcpy(a->check_report, "ERROR: INCORRECT COORDINATE");
+    strcpy(a->check_report, "ERROR: INCORRECT COORDINATE\n");
     return -1;
 }

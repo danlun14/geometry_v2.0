@@ -1,6 +1,4 @@
-#include "functions.h"
-#include <stdio.h>
-#include <stdlib.h>
+#include "parse_functions.h"
 
 int get_radius(circle* cir, check_info* a)
 {
@@ -13,6 +11,6 @@ int get_radius(circle* cir, check_info* a)
         cir->radius = rad;
         return 0;
     }
-    strcpy(a->check_report, "ERROR: INCORRECT RADIUS");
+    strcpy(a->check_report, "ERROR: INCORRECT RADIUS\n");
     return -1;
 }

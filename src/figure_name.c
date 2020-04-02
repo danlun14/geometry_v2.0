@@ -1,4 +1,4 @@
-#include "functions.h"
+#include "parse_functions.h"
 
 char* equals_string(char* arr1, char* arr2, int n)
 {
@@ -39,7 +39,7 @@ int fcheck(char* arr, check_info* a)
     } else {
         temp = b_eq;
     }
-    strcpy(a->check_report, "ERROR: INCORRECT FIGURE NAME         ");
+    strcpy(a->check_report, "ERROR: INCORRECT FIGURE NAME          \n");
     for (i = 0; i < temp - st_of_fig + 2; i++) {
         if (arr[i] != *temp) {
             a->check_report[31 + i] = tolower(arr[i]);

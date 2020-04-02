@@ -1,4 +1,4 @@
-#include "functions.h"
+#include "parse_functions.h"
 
 int last_check(check_info* a)
 {
@@ -11,6 +11,6 @@ int last_check(check_info* a)
     if (num == '\n') {
         return 0;
     }
-    strcpy(a->check_report, "ERROR: INCORRECT SYMBOL AFTER \" ) \" ");
+    strcpy(a->check_report, "ERROR: INCORRECT SYMBOL AFTER \" ) \" \n");
     return -1;
 }

@@ -1,4 +1,4 @@
-#include "functions.h"
+#include "parse_functions.h"
 
 int lpar(check_info* a)
 {
@@ -7,10 +7,10 @@ int lpar(check_info* a)
     num = *(arr + i);
     while (num != '(') {
         if (num == '\n') {
-            strcpy(a->check_report, "ERROR: SYMBOL \"(\" NOT FOUND");
+            strcpy(a->check_report, "ERROR: SYMBOL \"(\" NOT FOUND\n");
             return -1;
         } else if (num != ' ') {
-            strcpy(a->check_report, "ERROR: INCORRECT FIGURE NAME");
+            strcpy(a->check_report, "ERROR: INCORRECT FIGURE NAME\n");
             return -1;
         }
         i++;

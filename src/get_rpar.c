@@ -1,4 +1,4 @@
-#include "functions.h"
+#include "parse_functions.h"
 
 int rpar(check_info* a)
 {
@@ -7,10 +7,10 @@ int rpar(check_info* a)
     num = *(arr + i);
     while (num != ')') {
         if (num == '\n') {
-            strcpy(a->check_report, "ERROR: SYMBOL \")\" NOT FOUND");
+            strcpy(a->check_report, "ERROR: SYMBOL \")\" NOT FOUND\n");
             return -1;
         } else if (num != ' ') {
-            strcpy(a->check_report, "ERROR: INCORRECT SYMBOL");
+            strcpy(a->check_report, "ERROR: INCORRECT SYMBOL\n");
             return -1;
         }
         i++;
