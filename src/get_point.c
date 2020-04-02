@@ -1,5 +1,5 @@
 #define NUM_SYS 10
-#include "parse_functions.h"
+#include "f.h"
 
 int get_point(point* p, check_info* a)
 {

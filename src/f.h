@@ -1,10 +1,14 @@
 #ifndef FUNCTIONS_H
 #define FUNCTIONS_H
 
+// libraries
+
 #include <ctype.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+
+// structs
 
 typedef struct {
     char check_report[48];
@@ -20,7 +24,7 @@ typedef struct {
     point center;
     float radius;
     float P; //периметр
-    float S;
+    float S; //площадь
 } circle;
 
 typedef struct {
@@ -30,6 +34,15 @@ typedef struct {
     float P;
     float S;
 } triangle;
+
+// standart figure functions
+
+void circle_copy(circle* cir1, circle* cir2);
+void triangle_copy(triangle* tri1, triangle* tri2);
+void print_circle(circle* cir);
+void print_triangle(triangle* tri);
+
+// parse functions
 
 int fcheck(char* arr, check_info* a);
 int lpar(check_info* a);

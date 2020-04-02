@@ -1,4 +1,4 @@
-#include "parse_functions.h"
+#include "f.h"
 
 char* equals_string(char* arr1, char* arr2, int n)
 {
