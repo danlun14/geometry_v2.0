@@ -1,6 +1,6 @@
 #include "f.h"
-
-int side_len(point* a, point* b)
+#include <math.h>
+float side_len(point* a, point* b)
 {
     return sqrt((a->x - b->x) * (a->x - b->x) + (a->y - b->y) * (a->y - b->y));
 }
