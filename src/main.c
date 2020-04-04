@@ -1,5 +1,6 @@
 #include "f.h"
-
+#define MAX_OF_CIR 3
+#define MAX_OF_TRI 3
 // parse circle
 
 int parse_circle_info(check_info* status, circle* mid_cir)
@@ -74,18 +75,18 @@ int main()
 {
     int num_of_cir = 0, num_of_tri = 0, index = 0;
     check_info status;
-    circle mid_cir, cir[3];
-    triangle mid_tri, tri[3];
+    circle mid_cir, cir[MAX_OF_CIR];
+    triangle mid_tri, tri[MAX_OF_TRI];
     int f_res = 0;
     char all[128];
-    while ((num_of_tri != num_of_cir) || (num_of_cir != 3)) {
+    while ((num_of_tri != num_of_cir) || (num_of_cir != MAX_OF_CIR) || (num_of_tri != MAX_OF_TRI)){
         for (int i = 0; i < 1; i++) {
             printf("Введите данные фигуры:\n");
             printf("circle(x y, r) - для круга( осталось %d)\n",
-                   3 - num_of_cir);
+                   MAX_OF_CIR - num_of_cir);
             printf("triangle (x1 y2, x2 y2, x3 y3) - для треугольника( "
                    "осталось %d)\n",
-                   3 - num_of_tri);
+                   MAX_OF_TRI - num_of_tri);
             printf("quit - выключить программу\n");
             fgets(all, 128, stdin);
             if (strcmp(all, "quit\n") == 0) {
@@ -96,7 +97,7 @@ int main()
                 printf("%s\n", status.check_report);
                 break;
             }
-            if ((f_res == 1) && (num_of_cir != 3)) {
+            if ((f_res == 1) && (num_of_cir != MAX_OF_CIR)) {
                 f_res = parse_circle_info(&status, &mid_cir);
                 if (f_res == 0) {
                     circle_copy(&cir[num_of_tri], &mid_cir);
