@@ -31,7 +31,7 @@ void print_circle(circle* cir)
     printf("-------------------------\n");
     printf("square:          %6.2f\n", cir->S);
     printf("perimetr:        %6.2f\n", cir->P);
-    printf("-------------------------\n");
+    printf("-------------------------\n\n");
 }
 
 void print_triangle(triangle* tri)
@@ -44,5 +44,5 @@ void print_triangle(triangle* tri)
     printf("-------------------------\n");
     printf("square:          %6.2f\n", tri->S);
     printf("perimetr:        %6.2f\n", tri->P);
-    printf("-------------------------\n");
+    printf("-------------------------\n\n");
 }
