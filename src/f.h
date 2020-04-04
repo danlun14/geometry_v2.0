@@ -42,6 +42,11 @@ void triangle_copy(triangle* tri1, triangle* tri2);
 void print_circle(circle* cir);
 void print_triangle(triangle* tri);
 
+// figure math
+
+void S_cir(circle* cir);
+void P_cir(circle* cir);
+
 // parse functions
 
 int fcheck(char* arr, check_info* a);

@@ -29,6 +29,8 @@ int parse_circle_info(check_info* status, circle* mid_cir)
     if (f_res == -1) {
         return -1;
     }
+    S_cir(mid_cir);
+    P_cir(mid_cir);
     return 0;
 }
 
@@ -79,7 +81,8 @@ int main()
     triangle mid_tri, tri[MAX_OF_TRI];
     int f_res = 0;
     char all[128];
-    while ((num_of_tri != num_of_cir) || (num_of_cir != MAX_OF_CIR) || (num_of_tri != MAX_OF_TRI)){
+    while ((num_of_tri != num_of_cir) || (num_of_cir != MAX_OF_CIR)
+           || (num_of_tri != MAX_OF_TRI)) {
         for (int i = 0; i < 1; i++) {
             printf("Введите данные фигуры:\n");
             printf("circle(x y, r) - для круга( осталось %d)\n",
@@ -100,7 +103,7 @@ int main()
             if ((f_res == 1) && (num_of_cir != MAX_OF_CIR)) {
                 f_res = parse_circle_info(&status, &mid_cir);
                 if (f_res == 0) {
-                    circle_copy(&cir[num_of_tri], &mid_cir);
+                    circle_copy(&cir[num_of_cir], &mid_cir);
                     print_circle(&cir[num_of_cir]);
                     num_of_cir++;
                 } else {
