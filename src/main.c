@@ -70,6 +70,8 @@ int parse_triangle_info(check_info* status, triangle* mid_tri)
     if (f_res == -1) {
         return -1;
     }
+    P_tri(mid_tri);
+    S_tri(mid_tri);
     return 0;
 }
 

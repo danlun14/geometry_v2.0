@@ -4,6 +4,7 @@
 // libraries
 
 #include <ctype.h>
+#include <math.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -41,6 +42,10 @@ void circle_copy(circle* cir1, circle* cir2);
 void triangle_copy(triangle* tri1, triangle* tri2);
 void print_circle(circle* cir);
 void print_triangle(triangle* tri);
+// figure math
+
+void P_tri(triangle* tri);
+void S_tri(triangle* tri);
 
 // figure math
 
